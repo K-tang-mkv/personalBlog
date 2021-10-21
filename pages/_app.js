@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
           <ul className="flex flex-row justify-center space-x-4">
             <li>
               <Link href="/">
-                <a>Home</a>
+                <a className="">Home</a>
               </Link>
             </li>
             <li>
