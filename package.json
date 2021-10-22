@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify/icons-simple-icons": "^1.1.47",
+    "@iconify/react": "^3.0.1",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",

@@ -1,5 +1,10 @@
 import '../styles/globals.css'
 import Link from 'next/link'
+import { Icon } from "@iconify/react";
+import githubIcon from "@iconify/icons-simple-icons/github";
+import instagramIcon from "@iconify/icons-simple-icons/instagram";
+import twitterIcon from "@iconify/icons-simple-icons/twitter";
+
 function MyApp({ Component, pageProps }) {
 
   return (
@@ -22,8 +27,24 @@ function MyApp({ Component, pageProps }) {
           </ul>
         </nav>
       </header>
-      
       <Component {...pageProps} />
+      <footer className="flex flex-col items-center justify-center w-full h-24 text-gray-600 border-t mt-8 border-gray-300">
+          <nav className="flex flex-row">
+            <a className="mr-6" href="https://github.com/K-tang-mkv">
+              <Icon className="w-6 h-6" icon={githubIcon} />
+            </a>
+            <a className="mr-6" href="https://www.instagram.com/">
+              <Icon className="w-6 h-6" icon={instagramIcon} />
+            </a>
+            <a href="https://twitter.com/Tang13220820">
+              <Icon className="w-6 h-6" icon={twitterIcon} />
+            </a>
+          </nav>
+          <div className="mt-2">
+            All content © Me
+          </div>
+      </footer>
+      
     </div>
     
   )
