@@ -8,6 +8,7 @@ import twitterIcon from "@iconify/icons-simple-icons/twitter";
 function MyApp({ Component, pageProps }) {
 
   return (
+    <body className="bg-red-50">
     <div className="mx-auto my-8 w-9/12">
       <header>
         <h1 className="text-6xl font-bold text-center">Cole Blog</h1>
@@ -46,7 +47,7 @@ function MyApp({ Component, pageProps }) {
       </footer>
       
     </div>
-    
+    </body>
   )
 }
 
