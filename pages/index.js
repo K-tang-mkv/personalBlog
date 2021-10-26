@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { format, parseISO, add} from "date-fns"
 import { getAllPosts } from "../lib/data"
+import marked from 'marked'
 
 export default function Home({posts}) {
   return (
@@ -47,7 +48,7 @@ function BlogListPost({title, slug, date, content}) {
         </Link>
       </div>
       <div className="text-xs text-gray-600">{format(parseISO(date), 'MMM do uuu')}</div>
-      <div className="text-lg">{content.substr(0, 300)}</div>
+      <div dangerouslySetInnerHTML={{__html: marked(content).substr(0, 300)}}></div>
     </div>
     
   )
