@@ -4,11 +4,12 @@ import { Icon } from "@iconify/react";
 import githubIcon from "@iconify/icons-simple-icons/github";
 import instagramIcon from "@iconify/icons-simple-icons/instagram";
 import twitterIcon from "@iconify/icons-simple-icons/twitter";
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
 
   return (
-    <body className="bg-red-50">
+    <ThemeProvider>
     <div className="mx-auto my-8 w-9/12">
       <header>
         <h1 className="text-6xl font-bold text-center">Cole Blog</h1>
@@ -47,7 +48,7 @@ function MyApp({ Component, pageProps }) {
       </footer>
       
     </div>
-    </body>
+    </ThemeProvider>
   )
 }
 

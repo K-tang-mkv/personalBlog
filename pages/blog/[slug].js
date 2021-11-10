@@ -21,15 +21,16 @@ export default function BlogPage({title, date, content}) {
             <div className="text-md text-gray-600">{format(parseISO(date), 'MMM do uuu')}</div>
         </div>
        
-        <div className="prose"dangerouslySetInnerHTML={{__html: marked(content)}}></div>
+        <div className="prose max-w-max" dangerouslySetInnerHTML={{__html: marked(content)}}></div>
         </main>
     </div>
   )
 }
 
 export async function getStaticProps(context) {
-
+    
     const { params } = context 
+    // params contain slug
     const allPosts = getAllPosts()
     const {data, content} = allPosts.find(post => post.slug === params.slug)
     

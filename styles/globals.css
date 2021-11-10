@@ -4,6 +4,8 @@
 
 @layer base {
   a {
-    @apply font-semibold hover:text-purple-300;
+    @apply font-semibold hover:text-purple-400;
   }
+
+  
 }

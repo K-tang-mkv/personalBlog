@@ -41,14 +41,16 @@ export async function getStaticProps() {
 
 function BlogListPost({title, slug, date, content}) {
   return (
-    <div className="border border-gray-100 shadow hover:shadow-md hover:border-gray-300 rounded-md p-4 transition duration-200 ease-linear">
-      <div>
-        <Link href={`/blog/${slug}`}>
-          <a className="font-bold">{title}</a>
-        </Link>
-      </div>
-      <div className="text-xs text-gray-600">{format(parseISO(date), 'MMM do uuu')}</div>
-      <div dangerouslySetInnerHTML={{__html: marked(content).substr(0, 300)}}></div>
+    <div className="border border-gray-100 shadow hover:shadow-lg hover:border-gray-400 rounded-md p-4 transition duration-200 ease-linear">
+    <Link href={`/blog/${slug}`}>
+      <a className="hover:text-current">
+        <div className="font-bold">
+          {title}
+        </div>
+        <div className="text-xs text-gray-600">{format(parseISO(date), 'MMM do uuu')}</div>
+        <div dangerouslySetInnerHTML={{__html: marked(content).substr(0, 300)}}></div>
+      </a>
+    </Link>
     </div>
     
   )
